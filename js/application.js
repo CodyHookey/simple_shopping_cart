@@ -19,18 +19,32 @@ var updateSubtotal = function () {
     $('#totalValue').html(subtotal.toFixed(2));
 }
 
+var finalBreakdown = function () {
+    var subtotal = parseFloat($('#totalValue').text());
+    var shipping = parseFloat($('#shipping').text());
+    
+    var vat = (subtotal + shipping) * 0.2;
+    $('#vat').html(vat.toFixed(2));
+
+    var cartTotal = subtotal + shipping + vat;
+    $('#cartTotal').html(cartTotal.toFixed(2))
+}
+
 $(document).ready(function () {
     updateSubtotal();
+    finalBreakdown();
 
     $('tbody').on('input', 'tr input', function () {
         var row = $(this).closest('tr');
         updateCost(row);
         updateSubtotal();
+        finalBreakdown();
     });
 
     $(document).on("click", ".btn-remove", function (event) {
         $(this).closest("tr").remove();
         updateSubtotal();
+        finalBreakdown();
     });
 
     $('#addProduct').on('submit', function (event) {
@@ -56,5 +70,6 @@ $(document).ready(function () {
         $(this).find('[name=price]').val('');
 
         updateSubtotal();
+        finalBreakdown();
     });
 });
