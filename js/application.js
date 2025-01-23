@@ -17,4 +17,8 @@ $(document).ready(function () {
         var row = $(this).closest('tr');
         updateCost(row);
     });
+
+    $(document).on("click", ".btn-remove", function (event) {
+        $(this).closest("tr").remove();
+    });
 });
