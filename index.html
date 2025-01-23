@@ -35,8 +35,8 @@
               <tr>
                 <td class="item">Milk</td>
                 <td class="text-center">£<span class="price">3.00</span></td>
-                <td class="Quantity text-center">
-                  <input type="number text-center">
+                <td class="quantity text-center">
+                  <input type="number">
                 </td>
                 <td class="cost text-center"></td>
                 <td class="text-center">
@@ -48,8 +48,8 @@
               <tr>
                 <td class="item">6 Eggs</td>
                 <td class="text-center">£<span class="price">4.40</span></td>
-                <td class="Quantity text-center">
-                  <input type="number text-center">
+                <td class="quantity text-center">
+                  <input type="number">
                 </td>
                 <td class="cost text-center"></td>
                 <td class="text-center">
@@ -61,8 +61,8 @@
               <tr>
                 <td class="item">Bread</td>
                 <td class="text-center">£<span class="price">4.40</span></td>
-                <td class="Quantity text-center">
-                  <input type="number text-center">
+                <td class="quantity text-center">
+                  <input type="number">
                 </td>
                 <td class="cost text-center"></td>
                 <td class="text-center">
@@ -74,9 +74,9 @@
             </tbody>
           </table>
         </div>
-        <form class="col-12" id="addProduct">
+        <form id="addProduct" class="col-12">
           <input class="mx-2" name="name" type="text" placeholder="Name" required>
-          <input class="mx-2" name="price" type="Number" placeholder="Price" required>
+          <input class="mx-2" name="price" type="Number" placeholder="Price" step="0.01" required>
           <button class="btn btn-primary btn-xs">Add</button>
         </form>
         <div class="col-12">
