@@ -1,3 +1,13 @@
+var updateItems = function () {
+    var items = 0;
+
+    $('tbody tr').each(function () {
+        items ++;
+    });
+
+    $('#itemCount').html(items);
+}
+
 var updateCost = function (element) {
     var price = parseFloat($(element).find('.price').text());
     var quantity = parseFloat($(element).find('.quantity input').val());
@@ -33,6 +43,7 @@ var finalBreakdown = function () {
 $(document).ready(function () {
     updateSubtotal();
     finalBreakdown();
+    updateItems();
 
     $('tbody').on('input', 'tr input', function () {
         var row = $(this).closest('tr');
@@ -45,6 +56,7 @@ $(document).ready(function () {
         $(this).closest("tr").remove();
         updateSubtotal();
         finalBreakdown();
+        updateItems();
     });
 
     $('#addProduct').on('submit', function (event) {
@@ -71,5 +83,6 @@ $(document).ready(function () {
 
         updateSubtotal();
         finalBreakdown();
+        updateItems();
     });
 });
