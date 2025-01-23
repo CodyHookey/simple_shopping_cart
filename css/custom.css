@@ -25,6 +25,17 @@ input {
     margin-bottom: 0.4%;
 }
 
+.btn-remove {
+    background-color: rgb(166, 0, 0);
+    color: White;
+    font-weight: bold;
+}
+
+.btn-remove:hover {
+    color: white;
+    background-color: red;
+}
+
 .breakdown {
     margin-top: 2em;
     display: flex;
