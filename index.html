@@ -75,12 +75,15 @@
           </table>
         </div>
         <form id="addProduct" class="col-12">
-          <input class="mx-2" name="name" type="text" placeholder="Name" required>
-          <input class="mx-2" name="price" type="Number" placeholder="Price" step="0.01" required>
-          <button class="btn btn-primary btn-xs">Add</button>
+          <input class="mx-2 itemName" name="name" type="text" placeholder="Name" required>
+          <input class="mx-2 itemPrice" name="price" type="Number" placeholder="Price" step="0.01" required>
+          <button class="btn btn-primary btn-xs add-btn">Add</button>
         </form>
-        <div class="col-12">
-          <h3>Total: £<span id="totalValue"></span></h3>
+        <div class="breakdown">
+          <h4 class="breakdownItems">Subtotal: £<span id="totalValue"></span></h4>
+          <h4 class="breakdownItems">Shipping: £<span id="shipping">6.99</span></h4>
+          <h4 class="breakdownItems">VAT: £<span id="vat"></span></h4>
+          <h3 class="breakdownItems">Total: £<span id="cartTotal"></span></h3>
         </div>
       </div>
     </div>

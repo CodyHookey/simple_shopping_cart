@@ -1,0 +1,40 @@
+thead {
+    background-color: teal;
+    color: white;
+}
+
+#addProduct {
+    align-content: center;
+    height: 40px;
+}
+
+input {
+    width: 100px;
+    text-align: center;
+}
+
+.itemName {
+    width: 100px;
+}
+
+.add-btn {
+    background-color: teal;
+    font-weight: bold;
+    width: 100px;
+    padding: 3px 10px;
+    margin-bottom: 0.4%;
+}
+
+.breakdown {
+    margin-top: 2em;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    justify-self: end;
+    width: 40%;
+    padding: 0px 15px;
+}
+
+.breakdownItems {
+    margin-left: 5%;
+}

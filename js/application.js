@@ -16,7 +16,7 @@ var updateSubtotal = function () {
         subtotal += cost;
     });
 
-    $('div h3 #totalValue').html(subtotal.toFixed(2));
+    $('#totalValue').html(subtotal.toFixed(2));
 }
 
 $(document).ready(function () {
