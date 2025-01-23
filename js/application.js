@@ -1,9 +1,9 @@
 var updateCost = function (element) {
-    var price = parseFloat($(element).children('.price').text());
+    var price = parseFloat($(element).find('.price').text());
     var quantity = parseFloat($(element).find('.Quantity input').val());
 
     var cost = price * quantity
-    $(element).find('.cost').html(cost.toFixed(2));
+    $(element).find('.cost').html("£" + cost.toFixed(2));
 
     return cost;
 };
