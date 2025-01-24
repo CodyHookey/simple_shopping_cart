@@ -11,7 +11,11 @@ var updateItems = function () {
 var updateCost = function (element) {
     var price = parseFloat($(element).find('.price').text()) || 0;
     var quantity = parseFloat($(element).find('.quantity input').val()) || 0;
-
+    
+    if (quantity === NaN) {
+      quantity === 0;
+    }
+    
     var cost = price * quantity
     $(element).find('.cost').html("£" + cost.toFixed(2));
 
